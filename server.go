@@ -61,7 +61,7 @@ func main() {
   http.HandleFunc("/facebook", func(w http.ResponseWriter, r *http.Request) {
     delay := rand.Intn(5)
     time.Sleep(time.Duration(delay)*time.Second)
-    if (delay >= 4) {
+    if (delay >= 3) {
       w.WriteHeader(500)
       w.Write(err_buf)
       return
@@ -73,7 +73,7 @@ func main() {
   http.HandleFunc("/instagram", func(w http.ResponseWriter, r *http.Request) {
     delay := rand.Intn(5)
     time.Sleep(time.Duration(delay)*time.Second)
-    if (delay >= 4) {
+    if (delay >= 2) {
       w.WriteHeader(500)
       w.Write(err_buf)
       return
