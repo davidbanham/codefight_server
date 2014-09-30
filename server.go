@@ -50,6 +50,7 @@ func main() {
     delay := rand.Intn(5)
     time.Sleep(time.Duration(delay)*time.Second)
     if (delay >= 4) {
+      w.WriteHeader(500)
       w.Write(err_buf)
       return
     }
@@ -61,6 +62,7 @@ func main() {
     delay := rand.Intn(5)
     time.Sleep(time.Duration(delay)*time.Second)
     if (delay >= 4) {
+      w.WriteHeader(500)
       w.Write(err_buf)
       return
     }
@@ -72,6 +74,7 @@ func main() {
     delay := rand.Intn(5)
     time.Sleep(time.Duration(delay)*time.Second)
     if (delay >= 4) {
+      w.WriteHeader(500)
       w.Write(err_buf)
       return
     }
