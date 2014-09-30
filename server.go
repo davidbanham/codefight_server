@@ -44,20 +44,37 @@ func main() {
   }
   insta_buf, _ := json.Marshal(posts)
 
+  err_buf := []byte("I am trapped in a social media factory send help")
+
   http.HandleFunc("/twitter", func(w http.ResponseWriter, r *http.Request) {
-    time.Sleep(time.Duration(rand.Intn(5))*time.Second)
+    delay := rand.Intn(5)
+    time.Sleep(time.Duration(delay)*time.Second)
+    if (delay >= 4) {
+      w.Write(err_buf)
+      return
+    }
     w.Write(tweet_buf)
     return
   })
 
   http.HandleFunc("/facebook", func(w http.ResponseWriter, r *http.Request) {
-    time.Sleep(time.Duration(rand.Intn(5))*time.Second)
+    delay := rand.Intn(5)
+    time.Sleep(time.Duration(delay)*time.Second)
+    if (delay >= 4) {
+      w.Write(err_buf)
+      return
+    }
     w.Write(fb_buf)
     return
   })
 
   http.HandleFunc("/instagram", func(w http.ResponseWriter, r *http.Request) {
-    time.Sleep(time.Duration(rand.Intn(5))*time.Second)
+    delay := rand.Intn(5)
+    time.Sleep(time.Duration(delay)*time.Second)
+    if (delay >= 4) {
+      w.Write(err_buf)
+      return
+    }
     w.Write(insta_buf)
     return
   })
