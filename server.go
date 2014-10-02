@@ -54,6 +54,7 @@ func main() {
       w.Write(err_buf)
       return
     }
+    w.Header().Set("Content-Type", "application/json")
     w.Write(tweet_buf)
     return
   })
@@ -66,6 +67,7 @@ func main() {
       w.Write(err_buf)
       return
     }
+    w.Header().Set("Content-Type", "application/json")
     w.Write(fb_buf)
     return
   })
@@ -78,6 +80,7 @@ func main() {
       w.Write(err_buf)
       return
     }
+    w.Header().Set("Content-Type", "application/json")
     w.Write(insta_buf)
     return
   })
