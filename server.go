@@ -15,9 +15,9 @@ func main() {
     Tweet string `json:"tweet"`
   }
   tweets := []Tweet{
-    {Username: "@Bill_Nye_tho", Tweet: "I STRAIGHT UP HAVE NO IDEA HOW PORCUPINES FUCK EACH OTHER"},
-    {Username: "@WillFerrell", Tweet: "I want to have 3 kids and name them Ctrl, Alt and Delete. Then if they fuck up I will just hit them all at once."},
-    {Username: "@shitmydadsays", Tweet: "We ain't a sharp species. We kill each other over arguments about what happens when you die, then fail to see the fucking irony in that."},
+    {Username: "@GuyEndoreKaiser", Tweet: "If you live to be 100, you should make up some fake reason why, just to fuck with people... like claim you ate a pinecone every single day."},
+    {Username: "@mikeleffingwell", Tweet: "STOP TELLING ME YOUR NEWBORN'S WEIGHT AND LENGTH I DON'T KNOW WHAT TO DO WITH THAT INFORMATION."},
+    {Username: "@KeetPotato", Tweet: "he died doing what he loved, shouting \"fuck bears\" in the forest"},
   }
   tweet_buf, _ := json.Marshal(tweets)
 
