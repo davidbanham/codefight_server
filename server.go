@@ -54,6 +54,7 @@ func main() {
 			return
 		}
 		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Write(tweet_buf)
 		return
 	})
@@ -67,6 +68,7 @@ func main() {
 			return
 		}
 		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Write(fb_buf)
 		return
 	})
@@ -80,6 +82,7 @@ func main() {
 			return
 		}
 		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Write(insta_buf)
 		return
 	})
