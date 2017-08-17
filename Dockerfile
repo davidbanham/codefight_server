@@ -1,6 +1,6 @@
 FROM alpine:3.1
 
-COPY ./server-linux-amd64 /opt/codefight/
+COPY ./server /opt/codefight/
 
 WORKDIR /opt/codefight
 
