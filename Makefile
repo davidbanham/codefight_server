@@ -1,2 +1,4 @@
+name = codefight_server
+
 default:
-	GOOS=linux go build server.go
+		CGO_ENABLED=0 go build -o ./bin/$(name) -a -installsuffix cgo -ldflags '-s' .

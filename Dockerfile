@@ -1,10 +1,8 @@
-FROM alpine:3.1
+FROM scratch
 
-COPY ./server /opt/codefight/
-
-WORKDIR /opt/codefight
+COPY ./bin/codefight_server /codefight_server
 
 EXPOSE 3000
 
 ENV PORT=3000
-CMD ["./server"]
+ENTRYPOINT ["/codefight_server"]
